@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\11897\\RiderProjects\\Huiswerk\\Memory\\MemoryLibrary\\MemoryLibrary.csproj": {}
+    "C:\\Users\\irisp\\RiderProjects\\Memory\\MemoryLibrary\\MemoryLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\11897\\RiderProjects\\Huiswerk\\Memory\\MemoryLibrary\\MemoryLibrary.csproj": {
+    "C:\\Users\\irisp\\RiderProjects\\Memory\\MemoryLibrary\\MemoryLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\11897\\RiderProjects\\Huiswerk\\Memory\\MemoryLibrary\\MemoryLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\irisp\\RiderProjects\\Memory\\MemoryLibrary\\MemoryLibrary.csproj",
         "projectName": "MemoryLibrary",
-        "projectPath": "C:\\Users\\11897\\RiderProjects\\Huiswerk\\Memory\\MemoryLibrary\\MemoryLibrary.csproj",
-        "packagesPath": "C:\\Users\\11897\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\11897\\RiderProjects\\Huiswerk\\Memory\\MemoryLibrary\\obj\\",
+        "projectPath": "C:\\Users\\irisp\\RiderProjects\\Memory\\MemoryLibrary\\MemoryLibrary.csproj",
+        "packagesPath": "C:\\Users\\irisp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\irisp\\RiderProjects\\Memory\\MemoryLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\11897\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\irisp\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\irisp\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

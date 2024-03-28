@@ -4,6 +4,8 @@ namespace MemoryLibrary;
 
 public class Game
 {
+    public Card firstCard = null;
+    public Card secondCard = null;
     public List<Card> Cardslist { get; set; }
     public bool isFinished { get; set; }
     public Stage stage { get; set; }
@@ -66,5 +68,52 @@ public class Game
         }
     }
 
-    
+    public void changeStage(Card firstCard, Card secondCard, bool showScreen)
+    {
+        if (showScreen)
+        {
+            // the screen must be shown
+            stage = Stage.ShowScreen;
+        }
+        else if (secondCard != null)
+        {
+            // both cards turned, go to logic
+            stage = Stage.BothCardsFlipped;
+        }
+        else if (firstCard != null)
+        {
+            // first card turned
+            stage = Stage.PressSecondCard;
+        }
+        else
+        {
+            // no cards turned
+            stage = Stage.PressFirstCard;
+        }
+    }
+
+    public void checkIfCardsAreEqual(Card firstCard, Card secondCard)
+    {
+        if (!(firstCard.Id == secondCard.Id))
+        {
+            firstCard.flipCard();
+            secondCard.flipCard();
+        }
+
+        this.firstCard = null;
+        this.secondCard = null;
+    }
+
+    public bool checkIfGameFinished()
+    {
+        foreach (Card card in Cardslist)
+        {
+            if (!card.IsFlipped)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }

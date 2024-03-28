@@ -4,7 +4,7 @@ public class Card
 {
     public string Image { get; set; }
     public int Id { get; set; }
-    public bool isFlipped { get; set; }
+    public bool IsFlipped { get; set; }
     
     public Card(string image, int id)
     {
@@ -19,10 +19,15 @@ public class Card
         this.Image = "";
         this.Id = id;
     }
+
+    public void flipCard()
+    {
+        IsFlipped = !IsFlipped;
+    }
      
     override public string ToString()
     {
         // helper function for better printing while debugging
-        return "Card Id: " + this.Id + " || Image: " + this.Image;
+        return "Card Id: " + Id + " || Image: " + Image;
     }
 }
