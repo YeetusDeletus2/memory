@@ -31,9 +31,13 @@ public class Game
         Cardslist = new List<Card>();
         for (int i = 0; i < amountOfPairs; i++)
         {
-            Card card = new Card(i);
-            Cardslist.Add(card);
+            Card firstCard = new Card(i);
+            Card secondCard = new Card(i);
+            Cardslist.Add(firstCard);
+            Cardslist.Add(secondCard);
         }
+
+        Cardslist = ScrambleCards(Cardslist);
     }
 
     public List<Card> ScrambleCards(List<Card> cards)
