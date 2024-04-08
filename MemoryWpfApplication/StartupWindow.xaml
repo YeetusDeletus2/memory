@@ -1,0 +1,28 @@
+<Window x:Class="MemoryWpfApplication.StartupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:MemoryWpfApplication"
+        mc:Ignorable="d"
+        Title="StartupWindow" Height="320" Width="450" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="Memory Game" FontSize="24" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Number of Pairs:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <ComboBox x:Name="comboBoxPairs" Width="50" SelectedIndex="0"/>
+        </StackPanel>
+        
+        <Button Content="Start Game" Grid.Row="2" HorizontalAlignment="Center" Margin="0,20,0,0" Height="30" Click="btnStart_Click"/>
+        
+        <Button Content="High Scores" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,10" Height="30" Click="btnHighScores_Click"/>
+    </Grid>
+</Window>
