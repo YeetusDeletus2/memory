@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using MemoryLibrary;
 
 namespace MemoryWpfApplication;
@@ -22,13 +23,23 @@ public partial class MainWindow : Window
     public int Rows { get; set; } = 2;
     public int Columns { get; set; }
     public int AmountOfCards { get; set; } = 10;
-    
+
     private List<Button> _buttons = new List<Button>();
     private Game _game;
+    private TimeSpan _elapsedTime;
+    private DispatcherTimer _timer;
 
     private void MainWindow_Loaded(object sender, RoutedEventArgs e)
     {
         _game = new Game(AmountOfCards / 2);
+
+        _elapsedTime = TimeSpan.Zero;
+        TimeLabel.Text = _elapsedTime + " seconds.";
+
+        _timer = new DispatcherTimer();
+        _timer.Interval = TimeSpan.FromSeconds(1); // Update every second
+        _timer.Tick += Timer_Tick;
+        _timer.Start();
 
         // Calculate button size
         double buttonSize = GetButtonSize(ButtonUniformGrid.ActualWidth, ButtonUniformGrid.ActualHeight);
@@ -58,9 +69,9 @@ public partial class MainWindow : Window
             if (button == _buttons[i])
             {
                 currCard = _game.Cardslist[i];
-            } 
+            }
         }
-        
+
         switch (_game.stage)
         {
             case Stage.PressFirstCard:
@@ -90,12 +101,13 @@ public partial class MainWindow : Window
             {
                 but.IsEnabled = false;
             }
+
             await Task.Delay(1000);
             foreach (var but in _buttons)
             {
                 but.IsEnabled = true;
             }
-            
+
             if (!_game.checkIfCardsAreEqual(_game.firstCard, _game.secondCard))
             {
                 // hide both cards
@@ -107,26 +119,34 @@ public partial class MainWindow : Window
                     {
                         firstButton = _buttons[i];
                     }
+
                     if (_game.secondCard == _game.Cardslist[i])
                     {
                         secondButton = _buttons[i];
                     }
                 }
+
+                _game.TotalTries++;
                 _game.firstCard.flipCard();
                 _game.secondCard.flipCard();
                 showImageOfCard(firstButton, _game.firstCard);
                 showImageOfCard(secondButton, _game.secondCard);
-                
             }
+
             _game.ResetBothCards(_game.firstCard, _game.secondCard);
             _game.changeStage(_game.firstCard, _game.secondCard, false);
         }
-        
-        if (_game.isFinished)
+
+        if (_game.isFinished) 
         {
-            MessageBox.Show("Congratulations! Youve won.");
+            _timer.Stop();
+            List<int> scores = _game.ReadScoresFromFile(_game.FilePath);
+            int newScore = ((AmountOfCards ^ 2 / (int)_elapsedTime.TotalSeconds * _game.TotalTries) * 1000);
+            _game.AddScoreToFile(scores, newScore, _game.FilePath);
+            MessageBox.Show("Congratulations! You've won.\nYou're time is: " + _elapsedTime);
         }
     }
+
     private void showImageOfCard(Button button, Card currCard)
     {
         if (!currCard.IsFlipped)
@@ -155,6 +175,13 @@ public partial class MainWindow : Window
         double buttonSize = maxButtonSize - 10; // Subtracting padding
 
         return buttonSize;
+    }
+
+    private void Timer_Tick(object sender, EventArgs e)
+    {
+        // Increment the elapsed time by one second
+        _elapsedTime = _elapsedTime.Add(TimeSpan.FromSeconds(1));
+        TimeLabel.Text = _elapsedTime + " seconds.";
     }
 
     public MainWindow(int numberOfPairs)

@@ -22,8 +22,8 @@
         <!-- Labels or informative content -->
         <StackPanel Grid.Column="1" Background="LightGray">
             <!-- Add informative labels here -->
-            <TextBlock Margin="10" Text="Label 1" />
-            <TextBlock Margin="10" Text="Label 2" />
+            <TextBlock Margin="10" Text="Time:" />
+            <TextBlock Name="TimeLabel" Margin="10"/>
             <!-- Add more labels as needed -->
         </StackPanel>
     </Grid>

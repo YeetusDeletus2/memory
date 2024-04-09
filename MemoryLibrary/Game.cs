@@ -9,6 +9,8 @@ public class Game
     public List<Card> Cardslist { get; set; }
     public bool isFinished { get; set; }
     public Stage stage { get; set; }
+    public int TotalTries { get; set; }
+    public string FilePath { get; set; } = "scores.txt";
 
     public Game()
     {
@@ -37,7 +39,7 @@ public class Game
             Cardslist.Add(secondCard);
         }
 
-        // Cardslist = ScrambleCards(Cardslist);
+        Cardslist = ScrambleCards(Cardslist);
     }
 
     public List<Card> ScrambleCards(List<Card> cards)
@@ -82,7 +84,7 @@ public class Game
         else if (secondCard != null)
         {
             // both cards turned, go to logic
-            
+
             stage = Stage.BothCardsFlipped;
         }
         else if (firstCard != null)
@@ -101,7 +103,7 @@ public class Game
     {
         this.firstCard = null;
         this.secondCard = null;
-        
+
         this.isFinished = this.checkIfGameFinished();
     }
 
@@ -128,5 +130,47 @@ public class Game
         }
 
         return true;
+    }
+
+    public List<int> ReadScoresFromFile(string filePath)
+    {
+        List<int> scores = new List<int>();
+        if (File.Exists(filePath))
+        {
+            // Read existing scores from the file
+            string[] lines = File.ReadAllLines(filePath);
+            foreach (string line in lines)
+            {
+                if (int.TryParse(line, out int score))
+                {
+                    scores.Add(score);
+                }
+            }
+        }
+
+        return scores;
+    }
+
+    public void AddScoreToFile(List<int> scores, int newScore, string filePath)
+    {
+        // Add the new score
+        scores.Add(newScore);
+
+        // Sort the scores in descending order
+        scores.Sort((a, b) => b.CompareTo(a));
+
+        // Keep only the top 10 scores
+        if (scores.Count > 10)
+        {
+            scores.RemoveAt(10);
+        }
+
+        using (StreamWriter writer = new StreamWriter(this.FilePath))
+        {
+            foreach (int score in scores)
+            {
+                writer.WriteLine(score);
+            }
+        }
     }
 }

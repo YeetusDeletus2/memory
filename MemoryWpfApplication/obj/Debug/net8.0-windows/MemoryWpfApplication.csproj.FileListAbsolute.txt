@@ -78,3 +78,4 @@ C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\obj\Debug\net8.0-wi
 C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\obj\Debug\net8.0-windows\MemoryWpfApplication_Content.g.cs
 C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\obj\Debug\net8.0-windows\HighscoreWindow.baml
 C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\obj\Debug\net8.0-windows\MemoryWpfApplication.sourcelink.json
+C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\bin\Debug\net8.0-windows\scores.txt

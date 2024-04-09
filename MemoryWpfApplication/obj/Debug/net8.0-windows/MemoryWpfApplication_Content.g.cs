@@ -17,5 +17,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/7.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/8.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/9.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scores.txt")]
 
 
