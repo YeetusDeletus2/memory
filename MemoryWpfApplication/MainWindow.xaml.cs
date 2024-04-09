@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MemoryLibrary;
 
 namespace MemoryWpfApplication;
 
@@ -17,36 +18,53 @@ namespace MemoryWpfApplication;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private static int _maxAmountOfColumns = 5;
-    public int Rows { get; set; }
+    private static int _maxAmountOfColumns = 4;
+    public int Rows { get; set; } = 2;
     public int Columns { get; set; }
-    public int AmountOfCards { get; set; }
+    public int AmountOfCards { get; set; } = 10;
+
+    private Game _game;
 
     private void MainWindow_Loaded(object sender, RoutedEventArgs e)
     {
-        if (Rows == 0)
-        {
-            Rows = 2; // default value
-        }
-
-        if (AmountOfCards == 0)
-        {
-            AmountOfCards = 10;
-        }
+        _game = new Game(AmountOfCards / 2);
 
         // Calculate button size
         double buttonSize = GetButtonSize(ButtonUniformGrid.ActualWidth, ButtonUniformGrid.ActualHeight);
         // Add buttons
         for (int i = 0; i < AmountOfCards; i++)
         {
+            Card currCard = _game.Cardslist[i];
+
             Button button = new Button();
-            button.Content = "Button " + (i + 1); // later hier afbeelding
+            Image img = new Image();
+            img.Source = new BitmapImage(new Uri(currCard.Image, UriKind.Relative));
+
             button.Width = buttonSize;
             button.Height = buttonSize;
+            img.Width = button.Width;
+            img.Height = button.Height;
+
+            button.Name = i.ToString();
+            // button.Content = img;
+            
             button.Margin = new Thickness(5); // Set margin for padding around the buttons
             ButtonUniformGrid.Children.Add(button); // Add button to UniformGrid
         }
     }
+
+    public void OnButtonClick(object sender, RoutedEventArgs e)
+    {
+        Button button = (Button)sender;
+        Card currCard = _game.Cardslist[int.Parse(button.Name)];
+        
+        Image img = new Image();
+        img.Source = new BitmapImage(new Uri(currCard.Image, UriKind.Relative));
+
+        button.Content = img;
+    }
+    
+    // button.Content = img;
 
     // Function to calculate button size based on available space and number of buttons
     private double GetButtonSize(double width, double height)

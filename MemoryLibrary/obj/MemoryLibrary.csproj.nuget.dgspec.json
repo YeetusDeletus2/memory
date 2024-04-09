@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\irisp\\RiderProjects\\memory-wpf\\MemoryLibrary\\MemoryLibrary.csproj": {}
+    "C:\\Users\\11897\\RiderProjects\\memory-master\\MemoryLibrary\\MemoryLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\irisp\\RiderProjects\\memory-wpf\\MemoryLibrary\\MemoryLibrary.csproj": {
+    "C:\\Users\\11897\\RiderProjects\\memory-master\\MemoryLibrary\\MemoryLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\irisp\\RiderProjects\\memory-wpf\\MemoryLibrary\\MemoryLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\11897\\RiderProjects\\memory-master\\MemoryLibrary\\MemoryLibrary.csproj",
         "projectName": "MemoryLibrary",
-        "projectPath": "C:\\Users\\irisp\\RiderProjects\\memory-wpf\\MemoryLibrary\\MemoryLibrary.csproj",
-        "packagesPath": "C:\\Users\\irisp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\irisp\\RiderProjects\\memory-wpf\\MemoryLibrary\\obj\\",
+        "projectPath": "C:\\Users\\11897\\RiderProjects\\memory-master\\MemoryLibrary\\MemoryLibrary.csproj",
+        "packagesPath": "C:\\Users\\11897\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\11897\\RiderProjects\\memory-master\\MemoryLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\irisp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\11897\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\irisp\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
