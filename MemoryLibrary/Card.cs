@@ -1,4 +1,4 @@
-using System.Windows.Controls;
+using System.Net.Mime;
 
 namespace MemoryLibrary;
 
@@ -11,13 +11,11 @@ public class Card
             return $@"images\{Id}.png";
         }
     }
-
     public int Id { get; set; }
     public bool IsFlipped { get; set; }
     
     public Card(int id)
     {
-        // for the wpf version, this allows for an image to be added to the constuctor
         Id = id;
     }
 

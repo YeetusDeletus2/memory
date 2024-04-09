@@ -37,7 +37,7 @@ public class Game
             Cardslist.Add(secondCard);
         }
 
-        Cardslist = ScrambleCards(Cardslist);
+        // Cardslist = ScrambleCards(Cardslist);
     }
 
     public List<Card> ScrambleCards(List<Card> cards)
@@ -82,6 +82,7 @@ public class Game
         else if (secondCard != null)
         {
             // both cards turned, go to logic
+            
             stage = Stage.BothCardsFlipped;
         }
         else if (firstCard != null)
@@ -96,16 +97,24 @@ public class Game
         }
     }
 
-    public void checkIfCardsAreEqual(Card firstCard, Card secondCard)
+    public void ResetBothCards(Card firstCard, Card secondCard)
+    {
+        this.firstCard = null;
+        this.secondCard = null;
+        
+        this.isFinished = this.checkIfGameFinished();
+    }
+
+    public bool checkIfCardsAreEqual(Card firstCard, Card secondCard)
     {
         if (!(firstCard.Id == secondCard.Id))
         {
-            firstCard.flipCard();
-            secondCard.flipCard();
+            return false;
         }
-
-        this.firstCard = null;
-        this.secondCard = null;
+        else
+        {
+            return true;
+        }
     }
 
     public bool checkIfGameFinished()

@@ -200,3 +200,4 @@ C:\Users\11897\RiderProjects\memory-master\MemoryLibrary\bin\Debug\net8.0\tr\Sys
 C:\Users\11897\RiderProjects\memory-master\MemoryLibrary\bin\Debug\net8.0\zh-Hans\System.Windows.Forms.Primitives.resources.dll
 C:\Users\11897\RiderProjects\memory-master\MemoryLibrary\bin\Debug\net8.0\zh-Hant\System.Windows.Forms.Primitives.resources.dll
 C:\Users\11897\RiderProjects\memory-master\MemoryLibrary\obj\Debug\net8.0\MemoryLi.06B89C98.Up2Date
+C:\Users\irisp\RiderProjects\memory-wpf\MemoryLibrary\obj\Debug\net8.0\MemoryLibrary.sourcelink.json

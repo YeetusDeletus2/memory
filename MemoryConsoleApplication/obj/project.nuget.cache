@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "40wc7c1z7ZIee+CvRcFUV1KaIVgdfCHm6DS5GloumjgO09Ov4CbiMplO4FbOWCU2vKebmWknDU4yPBfDFU+3ow==",
+  "dgSpecHash": "TJFDrGZ23pMH1gPYgwgdyHwWLriS7HdrC7HbgetFWh9wUSKHduiZmTC9rn+eBPl0/O/qfkejpm8KkI7fnNmI9Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\11897\\RiderProjects\\memory-master\\MemoryConsoleApplication\\MemoryConsoleApplication.csproj",
+  "projectFilePath": "C:\\Users\\irisp\\RiderProjects\\memory-wpf\\MemoryConsoleApplication\\MemoryConsoleApplication.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

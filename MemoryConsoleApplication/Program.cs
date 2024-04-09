@@ -19,7 +19,6 @@ class Program
                     string[] firstCardPressed = input.Split(',');
                     int firstLocation = (5 * Int32.Parse(firstCardPressed[0])) + Int32.Parse(firstCardPressed[1]);
                     game.firstCard = game.Cardslist[firstLocation];
-                    game.firstCard.flipCard();
 
                     game.changeStage(game.firstCard, game.secondCard, true);
                     break;
@@ -31,17 +30,15 @@ class Program
                     string[] secondCardPressed = input.Split(',');
                     int secondLocation = (5 * Int32.Parse(secondCardPressed[0])) + Int32.Parse(secondCardPressed[1]);
                     game.secondCard = game.Cardslist[secondLocation];
-                    game.secondCard.flipCard();
 
                     game.changeStage(game.firstCard, game.secondCard, true);
                     break;
 
                 case Stage.BothCardsFlipped:
-                    game.checkIfCardsAreEqual(game.firstCard, game.secondCard);
                     Console.WriteLine("Press enter to continue.");
                     input = Console.ReadLine();
                     Console.Clear();
-                    game.isFinished = game.checkIfGameFinished();
+                    
                     game.changeStage(game.firstCard, game.secondCard, true);
                     break;
 

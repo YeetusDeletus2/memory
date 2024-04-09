@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MemoryWpfApplication
-build_property.ProjectDir = C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\
+build_property.ProjectDir = C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
