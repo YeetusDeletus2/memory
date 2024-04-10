@@ -7,16 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scores.txt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/0.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/1.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/2.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/3.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/4.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/5.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/6.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/7.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/8.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/9.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scores.txt")]
 
 

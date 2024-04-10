@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryConsoleApplication", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryWpfApplication", "MemoryWpfApplication\MemoryWpfApplication.csproj", "{8D2F91C4-A44E-4667-9D70-98A788B794FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryUnitTests", "MemoryUnitTests\MemoryUnitTests.csproj", "{943563E1-D4DC-4429-9E25-BCBF1B214036}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{8D2F91C4-A44E-4667-9D70-98A788B794FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D2F91C4-A44E-4667-9D70-98A788B794FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D2F91C4-A44E-4667-9D70-98A788B794FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{943563E1-D4DC-4429-9E25-BCBF1B214036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943563E1-D4DC-4429-9E25-BCBF1B214036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943563E1-D4DC-4429-9E25-BCBF1B214036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943563E1-D4DC-4429-9E25-BCBF1B214036}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

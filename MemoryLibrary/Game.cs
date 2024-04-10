@@ -65,15 +65,6 @@ public class Game
         return scrambledList;
     }
 
-    public void printCardslist()
-    {
-        // helper function for debugging
-        for (int i = 0; i < Cardslist.Count; i++)
-        {
-            Console.WriteLine(Cardslist[i]);
-        }
-    }
-
     public void changeStage(Card firstCard, Card secondCard, bool showScreen)
     {
         if (showScreen)
@@ -130,47 +121,5 @@ public class Game
         }
 
         return true;
-    }
-
-    public List<int> ReadScoresFromFile(string filePath)
-    {
-        List<int> scores = new List<int>();
-        if (File.Exists(filePath))
-        {
-            // Read existing scores from the file
-            string[] lines = File.ReadAllLines(filePath);
-            foreach (string line in lines)
-            {
-                if (int.TryParse(line, out int score))
-                {
-                    scores.Add(score);
-                }
-            }
-        }
-
-        return scores;
-    }
-
-    public void AddScoreToFile(List<int> scores, int newScore, string filePath)
-    {
-        // Add the new score
-        scores.Add(newScore);
-
-        // Sort the scores in descending order
-        scores.Sort((a, b) => b.CompareTo(a));
-
-        // Keep only the top 10 scores
-        if (scores.Count > 10)
-        {
-            scores.RemoveAt(10);
-        }
-
-        using (StreamWriter writer = new StreamWriter(this.FilePath))
-        {
-            foreach (int score in scores)
-            {
-                writer.WriteLine(score);
-            }
-        }
     }
 }

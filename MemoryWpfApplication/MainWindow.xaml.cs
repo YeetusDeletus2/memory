@@ -1,14 +1,6 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 using MemoryLibrary;
 
@@ -25,7 +17,9 @@ public partial class MainWindow : Window
     public int AmountOfCards { get; set; } = 10;
 
     private List<Button> _buttons = new List<Button>();
+    private int _selectedButtonIndex;
     private Game _game;
+    private FileReading _fileReading = new FileReading();
     private TimeSpan _elapsedTime;
     private DispatcherTimer _timer;
 
@@ -63,15 +57,23 @@ public partial class MainWindow : Window
     public async void OnButtonClick(object sender, RoutedEventArgs e)
     {
         Button button = (Button)sender;
+        int selectedButton = -1;
         Card currCard = null;
         for (int i = 0; i < _buttons.Count; i++)
         {
             if (button == _buttons[i])
             {
                 currCard = _game.Cardslist[i];
+                selectedButton = i;
             }
         }
 
+        if (selectedButton == _selectedButtonIndex)
+        {
+            return;
+        }
+
+        _selectedButtonIndex = selectedButton;
         switch (_game.stage)
         {
             case Stage.PressFirstCard:
@@ -137,13 +139,20 @@ public partial class MainWindow : Window
             _game.changeStage(_game.firstCard, _game.secondCard, false);
         }
 
-        if (_game.isFinished) 
+        if (_game.isFinished)
         {
             _timer.Stop();
-            List<int> scores = _game.ReadScoresFromFile(_game.FilePath);
+            List<int> scores = _fileReading.ReadScoresFromFile(_game.FilePath);
             int newScore = ((AmountOfCards ^ 2 / (int)_elapsedTime.TotalSeconds * _game.TotalTries) * 1000);
-            _game.AddScoreToFile(scores, newScore, _game.FilePath);
-            MessageBox.Show("Congratulations! You've won.\nYou're time is: " + _elapsedTime);
+            _fileReading.AddScoreToFile(scores, newScore, _game.FilePath);
+            MessageBoxResult result = MessageBox.Show("Congratulations! You've won.\nYou're time is: " + _elapsedTime,
+                "", MessageBoxButton.OK);
+            if (result == MessageBoxResult.OK)
+            {
+                StartupWindow startupWindow = new StartupWindow();
+                startupWindow.Show();
+                this.Close();
+            }
         }
     }
 

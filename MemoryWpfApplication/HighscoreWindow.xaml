@@ -5,8 +5,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:MemoryWpfApplication"
         mc:Ignorable="d"
-        Title="HighscoreWindow" Height="450" Width="800">
+        Title="HighscoreWindow" Height="450" Width="400">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         
+        <TextBlock Text="High Scores" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"/>
+        
+        <StackPanel Grid.Row="1" Name="HighScoresStackPanel" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <!-- High scores will be displayed here -->
+        </StackPanel>
+        
+        <Button Grid.Row="2" Content="Return" Padding="5" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="ReturnClick"/>
     </Grid>
 </Window>
