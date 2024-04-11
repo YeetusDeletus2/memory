@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
@@ -15,25 +16,36 @@ public partial class MainWindow : Window
     public int Rows { get; set; } = 2;
     public int Columns { get; set; }
     public int AmountOfCards { get; set; } = 10;
+    private string _name { get; set; } = "John Doe";
 
     private List<Button> _buttons = new List<Button>();
     private int _selectedButtonIndex;
     private Game _game;
     private FileReading _fileReading = new FileReading();
-    private TimeSpan _elapsedTime;
+    private TimerViewModel _viewModel;
     private DispatcherTimer _timer;
+
+    // private TimeSpan _elapsedTime
+    // {
+    //     get { return _elapsedTime; }
+    //     set
+    //     {
+    //         if (_elapsedTime != value)
+    //         {
+    //             _elapsedTime = value;
+    //             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(_elapsedTime)));
+    //         }
+    //     }
+    // }
 
     private void MainWindow_Loaded(object sender, RoutedEventArgs e)
     {
         _game = new Game(AmountOfCards / 2);
+        _game.Name = _name;
 
-        _elapsedTime = TimeSpan.Zero;
-        TimeLabel.Text = _elapsedTime + " seconds.";
+        // Label.Content = _elapsedTime + " seconds.";
 
-        _timer = new DispatcherTimer();
-        _timer.Interval = TimeSpan.FromSeconds(1); // Update every second
-        _timer.Tick += Timer_Tick;
-        _timer.Start();
+        InitializeTimer();
 
         // Calculate button size
         double buttonSize = GetButtonSize(ButtonUniformGrid.ActualWidth, ButtonUniformGrid.ActualHeight);
@@ -57,23 +69,15 @@ public partial class MainWindow : Window
     public async void OnButtonClick(object sender, RoutedEventArgs e)
     {
         Button button = (Button)sender;
-        int selectedButton = -1;
         Card currCard = null;
         for (int i = 0; i < _buttons.Count; i++)
         {
             if (button == _buttons[i])
             {
                 currCard = _game.Cardslist[i];
-                selectedButton = i;
             }
         }
 
-        if (selectedButton == _selectedButtonIndex)
-        {
-            return;
-        }
-
-        _selectedButtonIndex = selectedButton;
         switch (_game.stage)
         {
             case Stage.PressFirstCard:
@@ -86,9 +90,6 @@ public partial class MainWindow : Window
                 _game.secondCard.flipCard();
                 _game.changeStage(_game.firstCard, _game.secondCard, true);
                 break;
-            // case Stage.BothCardsFlipped:
-            //     _game.changeStage(_game.firstCard, _game.secondCard, true);
-            //     break;
         }
 
         if (_game.stage == Stage.ShowScreen)
@@ -143,9 +144,11 @@ public partial class MainWindow : Window
         {
             _timer.Stop();
             List<int> scores = _fileReading.ReadScoresFromFile(_game.FilePath);
-            int newScore = ((AmountOfCards ^ 2 / (int)_elapsedTime.TotalSeconds * _game.TotalTries) * 1000);
+            int newScore = ((AmountOfCards * AmountOfCards) / (int)_viewModel.ElapsedTime.TotalSeconds *
+                            _game.TotalTries) * 1000;
             _fileReading.AddScoreToFile(scores, newScore, _game.FilePath);
-            MessageBoxResult result = MessageBox.Show("Congratulations! You've won.\nYou're time is: " + _elapsedTime,
+            MessageBoxResult result = MessageBox.Show(
+                "Congratulations! You've won.\nYou're time is: " + _viewModel.ElapsedTime,
                 "", MessageBoxButton.OK);
             if (result == MessageBoxResult.OK)
             {
@@ -173,7 +176,6 @@ public partial class MainWindow : Window
         }
     }
 
-
     // Function to calculate button size based on available space and number of buttons
     private double GetButtonSize(double width, double height)
     {
@@ -189,12 +191,22 @@ public partial class MainWindow : Window
     private void Timer_Tick(object sender, EventArgs e)
     {
         // Increment the elapsed time by one second
-        _elapsedTime = _elapsedTime.Add(TimeSpan.FromSeconds(1));
-        TimeLabel.Text = _elapsedTime + " seconds.";
+        _viewModel.ElapsedTime = _viewModel.ElapsedTime.Add(TimeSpan.FromSeconds(1));
     }
 
-    public MainWindow(int numberOfPairs)
+    private void InitializeTimer()
     {
+        _timer = new DispatcherTimer();
+        _timer.Interval = TimeSpan.FromSeconds(1);
+        _timer.Tick += Timer_Tick;
+        _timer.Start();
+    }
+
+    public MainWindow(int numberOfPairs, string name)
+    {
+        InitializeComponent();
+
+        _name = name;
         AmountOfCards = numberOfPairs * 2;
         Columns = _maxAmountOfColumns;
         if (AmountOfCards % Columns == 0)
@@ -206,6 +218,7 @@ public partial class MainWindow : Window
             Rows = (AmountOfCards / Columns) + 1;
         }
 
-        InitializeComponent();
+        _viewModel = new TimerViewModel();
+        DataContext = _viewModel;
     }
 }

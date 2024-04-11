@@ -11,7 +11,7 @@ public partial class HighscoreWindow : Window
         InitializeComponent();
         PopulateHighScores();
     }
-    
+
     private void PopulateHighScores()
     {
         // Sample high scores data (replace with your actual data)

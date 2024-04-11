@@ -5,26 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemoryWpfApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1600" Loaded="MainWindow_Loaded"> 
+        Title="MainWindow" Height="900" Width="1600" Loaded="MainWindow_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" /> <!-- Auto adjusts to available space -->
             <ColumnDefinition Width="200" /> <!-- 200 pixels for labels -->
         </Grid.ColumnDefinitions>
-        
+
         <ScrollViewer Grid.Column="0">
             <UniformGrid x:Name="ButtonUniformGrid">
                 <!-- Buttons will be added here dynamically -->
             </UniformGrid>
-            
+
         </ScrollViewer>
 
         <!-- Labels or informative content -->
         <StackPanel Grid.Column="1" Background="LightGray">
             <!-- Add informative labels here -->
             <TextBlock Margin="10" Text="Time:" />
-            <TextBlock Name="TimeLabel" Margin="10"/>
-            <!-- Add more labels as needed -->
+            <Label Content="{Binding ElapsedTime}" Margin="10" />
         </StackPanel>
     </Grid>
 </Window>

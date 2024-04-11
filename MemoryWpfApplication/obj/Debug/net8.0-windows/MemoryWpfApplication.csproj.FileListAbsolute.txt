@@ -18,8 +18,6 @@ C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\obj\Debug\net8.0
 C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\obj\Debug\net8.0-windows\MemoryWpfApplication.pdb
 C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\obj\Debug\net8.0-windows\MemoryWpfApplication.genruntimeconfig.cache
 C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\obj\Debug\net8.0-windows\ref\MemoryWpfApplication.dll
-C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\MemoryLibrary.dll
-C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\MemoryLibrary.pdb
 C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\obj\Debug\net8.0-windows\MemoryWpfApplication.csproj.AssemblyReference.cache
 C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\obj\Debug\net8.0-windows\MemoryWp.D4AEDAF0.Up2Date
 C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\bin\Debug\net8.0-windows\MemoryWpfApplication.exe
@@ -60,10 +58,6 @@ C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0
 C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\images\3.png
 C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\images\4.png
 C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\images\5.png
-C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\images\6.png
-C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\images\7.png
-C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\images\8.png
-C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\images\9.png
 C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\obj\Debug\net8.0-windows\HighscoreWindow.g.cs
 C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\obj\Debug\net8.0-windows\MemoryWpfApplication_Content.g.cs
 C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\obj\Debug\net8.0-windows\HighscoreWindow.baml
@@ -75,3 +69,8 @@ C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\bin\Debug\net8.0-wi
 C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\bin\Debug\net8.0-windows\images\3.png
 C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\bin\Debug\net8.0-windows\images\4.png
 C:\Users\irisp\RiderProjects\memory-wpf\MemoryWpfApplication\bin\Debug\net8.0-windows\images\5.png
+C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\scores.txt
+C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\Memory.Logic.dll
+C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\Memory.Model.dll
+C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\Memory.Logic.pdb
+C:\Users\11897\RiderProjects\memory-master\MemoryWpfApplication\bin\Debug\net8.0-windows\Memory.Model.pdb

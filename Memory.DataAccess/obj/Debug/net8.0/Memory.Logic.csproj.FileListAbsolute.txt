@@ -1,0 +1,12 @@
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\bin\Debug\net8.0\Memory.Logic.deps.json
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\bin\Debug\net8.0\Memory.Logic.dll
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\bin\Debug\net8.0\Memory.Logic.pdb
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\obj\Debug\net8.0\Memory.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\obj\Debug\net8.0\Memory.Logic.AssemblyInfoInputs.cache
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\obj\Debug\net8.0\Memory.Logic.AssemblyInfo.cs
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\obj\Debug\net8.0\Memory.Logic.csproj.CoreCompileInputs.cache
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\obj\Debug\net8.0\Memory.Logic.sourcelink.json
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\obj\Debug\net8.0\Memory.Logic.dll
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\obj\Debug\net8.0\refint\Memory.Logic.dll
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\obj\Debug\net8.0\Memory.Logic.pdb
+C:\Users\11897\RiderProjects\memory-master\Memory.Logic\obj\Debug\net8.0\ref\Memory.Logic.dll

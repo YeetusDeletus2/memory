@@ -39,7 +39,7 @@ namespace MemoryWpfApplication
             }
 
             // Start the game with the chosen number of pairs
-            MainWindow mainWindow = new MainWindow(numberOfPairs);
+            MainWindow mainWindow = new MainWindow(numberOfPairs, NameTextBox.Text);
             mainWindow.Show();
             this.Close();
         }

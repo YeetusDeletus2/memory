@@ -9,7 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MemoryLibrary\MemoryLibrary.csproj" />
+      <ProjectReference Include="..\Memory.DataAccess\Memory.DataAccess.csproj" />
+      <ProjectReference Include="..\Memory.Library\Memory.Library.csproj" />
     </ItemGroup>
 
     <ItemGroup>
