@@ -38,7 +38,7 @@ class Program
                     Console.WriteLine("Press enter to continue.");
                     input = Console.ReadLine();
                     Console.Clear();
-                    
+
                     game.changeStage(game.firstCard, game.secondCard, true);
                     break;
 

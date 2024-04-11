@@ -25,25 +25,11 @@ public partial class MainWindow : Window
     private TimerViewModel _viewModel;
     private DispatcherTimer _timer;
 
-    // private TimeSpan _elapsedTime
-    // {
-    //     get { return _elapsedTime; }
-    //     set
-    //     {
-    //         if (_elapsedTime != value)
-    //         {
-    //             _elapsedTime = value;
-    //             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(_elapsedTime)));
-    //         }
-    //     }
-    // }
-
     private void MainWindow_Loaded(object sender, RoutedEventArgs e)
     {
         _game = new Game(AmountOfCards / 2);
         _game.Name = _name;
 
-        // Label.Content = _elapsedTime + " seconds.";
 
         InitializeTimer();
 

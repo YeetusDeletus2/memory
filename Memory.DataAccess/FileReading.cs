@@ -17,6 +17,7 @@ public class FileReading
                 }
             }
         }
+
         File.Delete(filePath);
         return scores;
     }

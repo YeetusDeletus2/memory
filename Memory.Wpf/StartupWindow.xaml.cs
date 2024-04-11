@@ -9,6 +9,7 @@ namespace MemoryWpfApplication
     public partial class StartupWindow : Window
     {
         private int _customImageIndex = 0;
+
         public StartupWindow()
         {
             InitializeComponent();
