@@ -1,0 +1,12 @@
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\bin\Debug\net8.0\Memory.DataAccess.deps.json
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\bin\Debug\net8.0\Memory.DataAccess.dll
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\bin\Debug\net8.0\Memory.DataAccess.pdb
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\obj\Debug\net8.0\Memory.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\obj\Debug\net8.0\Memory.DataAccess.AssemblyInfoInputs.cache
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\obj\Debug\net8.0\Memory.DataAccess.AssemblyInfo.cs
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\obj\Debug\net8.0\Memory.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\obj\Debug\net8.0\Memory.DataAccess.sourcelink.json
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\obj\Debug\net8.0\Memory.DataAccess.dll
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\obj\Debug\net8.0\refint\Memory.DataAccess.dll
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\obj\Debug\net8.0\Memory.DataAccess.pdb
+C:\Users\11897\RiderProjects\memory-master\Memory.DataAccess\obj\Debug\net8.0\ref\Memory.DataAccess.dll

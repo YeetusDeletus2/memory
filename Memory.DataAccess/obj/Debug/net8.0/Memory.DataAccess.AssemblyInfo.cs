@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Memory.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+445beca4bc07229e8ec5f113392cab154c6609ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d31d87642c89928b6f8a358914e73a4c4b50443")]
 [assembly: System.Reflection.AssemblyProductAttribute("Memory.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Memory.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

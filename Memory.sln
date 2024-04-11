@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memory.Library", "Memory.Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memory.Console", "Memory.Console\Memory.Console.csproj", "{DD1F55C2-0391-4A6D-A46D-76B30D5B6BC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryWpfApplication", "MemoryWpfApplication\MemoryWpfApplication.csproj", "{8D2F91C4-A44E-4667-9D70-98A788B794FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memory.Wpf", "Memory.Wpf\Memory.Wpf.csproj", "{8D2F91C4-A44E-4667-9D70-98A788B794FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memory.UnitTests", "Memory.UnitTests\Memory.UnitTests.csproj", "{943563E1-D4DC-4429-9E25-BCBF1B214036}"
 EndProject
